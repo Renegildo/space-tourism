@@ -109,7 +109,7 @@
     {
       "number": "00",
       "label": "HOME",
-      "link": "/home"
+      "link": "/"
     },
     {
       "number": "01",
