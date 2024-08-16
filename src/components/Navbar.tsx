@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex items-center justify-between p-8 md:p-0 lg:pt-14 lg:backdrop-blur">
+    <header className="flex items-center justify-between p-8 md:p-0 lg:pt-14">
       <img
         src={logo.src}
         className="w-12 h-12 md:mx-12"
@@ -33,9 +33,9 @@ const Navbar = () => {
         height={48}
       />
 
-      <div className="w-full border border-white translate-x-10 opacity-25 hidden lg:block" />
+      <div className="w-full border border-white translate-x-10 opacity-25 hidden lg:block z-10" />
 
-      <ul className="bg-white/5 md:flex gap-12 hidden md:py-8 md:px-10 md:w-full md:justify-end lg:px-16 lg:w-auto lg:pl-40 relative">
+      <ul className="bg-white/5 md:flex gap-12 hidden md:py-8 md:px-10 md:w-full md:justify-end lg:px-16 lg:w-auto lg:pl-40 lg:backdrop-blur relative">
         {navbarItems.map((item) => (
           <li key={item.label} className="flex flex-col items-center">
             <a href={item.link} className="flex gap-3">
