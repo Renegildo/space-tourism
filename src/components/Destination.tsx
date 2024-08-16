@@ -5,7 +5,7 @@ import { bgDestDesktop, bgDestMobile, bgDestTablet } from "../assets";
 
 const Destination = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
-  const currentDestination = useState<number>(0);
+  const [currentDestination, setCurrentDestination] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -38,37 +38,41 @@ const Destination = () => {
         </h2>
 
         <div className="w-36 h-36 m-14">
-          <img src="/src/assets/destination/image-moon.webp" alt="moon" />
+          <img
+            src={destinations[currentDestination].images.png}
+            alt={destinations[currentDestination].name}
+          />
         </div>
 
         <ul className="flex gap-5">
           {destinations.map((item, i) => (
-            <li
-              className={`capitalize ${i === 0 ? "text-white" : "text-blue-300"} font-barlow-condensed text-xl`}
+            <button
+              className={`capitalize ${i === currentDestination ? "text-white" : "text-blue-300"} font-barlow-condensed text-xl`}
+              onClick={() => setCurrentDestination(i)}
             >
               {item.name.toUpperCase()}
-            </li>
+            </button>
           ))}
         </ul>
 
         <h1 className="text-6xl my-5 font-bellefair">
-          {destinations[0].name.toUpperCase()}
+          {destinations[currentDestination].name.toUpperCase()}
         </h1>
 
         <p className="w-5/6 text-center text-blue-300 pb-10 border-b border-white/25 leading-[180%]">
-          {destinations[0].description}
+          {destinations[currentDestination].description}
         </p>
 
         <div className="text-center flex flex-col gap-3 mt-10 mb-5">
           <h2 className="text-blue-300">AVG. DISTANCE</h2>
           <h1 className="font-bellefair text-4xl">
-            {destinations[0].distance.toUpperCase()}
+            {destinations[currentDestination].distance.toUpperCase()}
           </h1>
         </div>
         <div className="text-center">
           <h2 className="text-blue-300">EST. TRAVEL TIME</h2>
           <h1 className="font-bellefair text-4xl">
-            {destinations[0].travel.toUpperCase()}
+            {destinations[currentDestination].travel.toUpperCase()}
           </h1>
         </div>
       </div>
