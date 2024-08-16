@@ -32,7 +32,7 @@ const Destination = () => {
       }}
     >
       <Navbar />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center overflow-hidden">
         <h2 className="text-center flex gap-6 font-barlow-condensed text-xl tracking-wider">
           <span className="opacity-25">01</span> PICK YOUR DESTINATION
         </h2>
@@ -46,12 +46,17 @@ const Destination = () => {
 
         <ul className="flex gap-5">
           {destinations.map((item, i) => (
-            <button
-              className={`capitalize ${i === currentDestination ? "text-white" : "text-blue-300"} font-barlow-condensed text-xl`}
-              onClick={() => setCurrentDestination(i)}
-            >
-              {item.name.toUpperCase()}
-            </button>
+            <li className="relative flex flex-col items-center">
+              <button
+                className={`capitalize ${i === currentDestination ? "text-white" : "text-blue-300"} font-barlow-condensed text-xl`}
+                onClick={() => setCurrentDestination(i)}
+              >
+                {item.name.toUpperCase()}
+              </button>
+              <div
+                className={`absolute -bottom-2 h-px w-full border border-white ${i === currentDestination ? "scale-100" : "scale-0"} transition duration-200`}
+              />
+            </li>
           ))}
         </ul>
 
