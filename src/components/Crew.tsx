@@ -57,13 +57,13 @@ const Crew = () => {
 
       <div className="relative mt-8 z-10">
         <img
-          className="w-1/2 border border-red-900 m-auto pointer-events-none select-none"
+          className="w-1/2 m-auto pointer-events-none select-none"
           src={crew[currentCrew].images.png}
           alt={crew[currentCrew].name}
           width={350}
           height={470}
         />
-        <div className="absolute bg-gradient-to-b left-0 bottom-0 w-full h-64 from-transparent to-blue-900 border border-blue-900" />
+        <div className="absolute bg-gradient-to-b left-0 bottom-0 w-full h-64 from-transparent to-blue-900" />
       </div>
     </section>
   );
