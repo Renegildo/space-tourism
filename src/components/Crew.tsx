@@ -32,16 +32,18 @@ const Crew = () => {
       }}
     >
       <Navbar />
-      <h3 className="text-xl flex gap-5 font-barlow-condensed tracking-wide w-full justify-center">
+      <h3 className="text-xl flex gap-5 font-barlow-condensed tracking-wide w-full justify-center md:mt-10 md:justify-start md:ml-12">
         <span className="opacity-25">02</span> MEET YOUR CREW
       </h3>
 
       <div className="flex items-center flex-col gap-2 mt-16 text-xl font-bellefair">
         <h2 className="opacity-50">{crew[currentCrew].role.toUpperCase()}</h2>
-        <h1 className="text-2xl">{crew[currentCrew].name.toUpperCase()}</h1>
+        <h1 className="text-2xl md:text-4xl">
+          {crew[currentCrew].name.toUpperCase()}
+        </h1>
       </div>
 
-      <p className="max-w-80 text-center m-auto mt-6 text-blue-300">
+      <p className="max-w-80 text-center m-auto mt-6 text-blue-300 md:max-w-lg">
         {crew[currentCrew].bio}
       </p>
 
