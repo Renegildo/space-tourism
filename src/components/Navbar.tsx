@@ -31,6 +31,7 @@ const Navbar = () => {
         className="w-12 h-12 md:mx-12"
         width={48}
         height={48}
+        alt="logo"
       />
 
       <div className="w-full border border-white translate-x-10 opacity-25 hidden lg:block z-10" />
@@ -54,6 +55,7 @@ const Navbar = () => {
           height={24}
           width={24}
           className="h-8 w-8"
+          alt="menu"
         />
       </button>
 
@@ -68,6 +70,7 @@ const Navbar = () => {
               height={24}
               width={24}
               className="h-8 w-8"
+              alt="close"
             />
           </button>
         </div>

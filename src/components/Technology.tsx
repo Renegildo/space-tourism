@@ -46,6 +46,7 @@ const Technology = () => {
                 ? technology[currentTech].images.landscape
                 : technology[currentTech].images.portrait
             }
+            alt={technology[currentTech].name}
           />
         </div>
         <div>
