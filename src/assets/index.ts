@@ -13,6 +13,10 @@ import bgCrewMobile from "./crew/background-crew-mobile.jpg";
 import bgCrewTablet from "./crew/background-crew-tablet.jpg";
 import bgCrewDesktop from "./crew/background-crew-desktop.jpg";
 
+import bgTechMobile from "./technology/background-technology-mobile.jpg";
+import bgTechTablet from "./technology/background-technology-tablet.jpg";
+import bgTechDesktop from "./technology/background-technology-desktop.jpg";
+
 export {
   logo,
   iconHamburguer,
@@ -26,4 +30,7 @@ export {
   bgCrewMobile,
   bgCrewTablet,
   bgCrewDesktop,
+  bgTechMobile,
+  bgTechTablet,
+  bgTechDesktop,
 };
