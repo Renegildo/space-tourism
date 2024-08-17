@@ -47,7 +47,7 @@ const Destination = () => {
           <div className="flex flex-col items-center lg:items-start md:mx-14 overflow-hidden">
             <ul className="flex gap-5">
               {destinations.map((item, i) => (
-                <li className="relative flex flex-col items-center">
+                <li className="relative flex flex-col items-center" key={i}>
                   <button
                     className={`capitalize ${i === currentDestination ? "text-white" : "text-blue-300"} font-barlow-condensed text-xl`}
                     onClick={() => setCurrentDestination(i)}

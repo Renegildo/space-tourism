@@ -7,6 +7,7 @@ import gsap from "gsap";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [currentUrl, setCurrentUrl] = useState<string>("");
 
   useEffect(() => {
     if (menuOpen) {
@@ -19,6 +20,10 @@ const Navbar = () => {
       });
     }
   }, [menuOpen]);
+
+  useEffect(() => {
+    setCurrentUrl(window.location.pathname);
+  }, []);
 
   const handleOpenMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -44,7 +49,10 @@ const Navbar = () => {
               {item.label}
             </a>
 
-            <div className="border border-white w-20 absolute h-px bottom-px" />
+            <div
+              style={{ opacity: currentUrl === item.link ? "100%" : "0" }}
+              className="border border-white w-20 absolute h-px bottom-px"
+            />
           </li>
         ))}
       </ul>
