@@ -36,7 +36,7 @@ const Crew = () => {
         <span className="opacity-25">02</span> MEET YOUR CREW
       </h3>
 
-      <div className="lg:flex lg:ml-40 lg:gap-8">
+      <div className="lg:flex lg:ml-40 lg:gap-8 lg:justify-center">
         <div className="flex flex-col lg:h-[65vh] lg:justify-between">
           <div>
             <div className="flex items-center lg:items-start flex-col gap-2 mt-16 text-xl font-bellefair">
