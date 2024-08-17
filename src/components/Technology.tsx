@@ -50,7 +50,7 @@ const Technology = () => {
         </div>
         <div>
           <div className="lg:flex">
-            <div className="flex gap-4 my-[2.5rem] w-full justify-center lg:flex-col lg:w-fit lg:my-0">
+            <div className="flex gap-4 lg:gap-8 my-[2.5rem] w-full justify-center lg:flex-col lg:w-fit lg:my-0">
               {technology.map((_, i) => (
                 <button
                   onClick={() => setCurrentTech(i)}
